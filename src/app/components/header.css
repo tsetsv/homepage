@@ -1,0 +1,78 @@
+.header {
+  background-color: #fefcff;
+  border-bottom: 2px solid #F1EEF5;
+  padding: 1rem 2rem;
+}
+
+.header-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.logo-container {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.logo-image {
+  width: 50px;
+  height: auto;
+  object-fit: cover;
+}
+
+.logo-text {
+  font-size: 1.5rem;
+  font-weight:bold;
+  color: #FF913C;
+}
+
+.navbar {
+  display: flex;
+  align-items: center;
+}
+
+.navbar-menu {
+  display: flex;
+  gap: 1.5rem;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.navbar-item a {
+  text-decoration: none;
+  color: rgba(50, 69, 92, 1);
+  font-size: 1rem;
+  transition: color 0.3s ease;
+}
+
+.navbar-item a.active {
+  color: rgba(255, 145, 60, 1);
+  font-weight: bold;
+}
+
+.navbar-item a:hover {
+  color: rgba(255, 145, 60, 1);
+}
+
+.auth {
+  margin-left: 1.5rem;
+}
+
+.auth-button {
+  background-color: rgba(255, 145, 60, 1);
+  color: #fefcff;
+  font-size: 0.875rem;
+  font-weight: 600;
+  padding: 0.5rem 1rem;
+  border-radius: 1rem;
+  text-decoration: none;
+}
+
+.auth-button:hover {
+  background-color: rgb(236, 119, 30);
+}

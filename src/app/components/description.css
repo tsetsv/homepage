@@ -1,0 +1,44 @@
+.description {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin: 40px auto;
+    gap: 20px;
+    color: rgb(129, 148, 171);
+    width: 75%;
+}
+  
+  .desc-text {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    max-width: 30%;
+  }
+
+  .desc-text:hover {
+    h3 {
+        color: rgba(50, 69, 92, 1);
+    }
+    p {
+        color: rgba(50, 69, 92, 1);
+    }
+  }
+  
+  .desc-text img {
+    width: 50px;
+    height: 50px;
+    object-fit: cover;
+    margin-bottom: 10px;
+  }
+  
+  .desc-text h3 {
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-bottom: 5px;
+  }
+  
+  .desc-text p {
+    font-size: 0.9rem;
+    color: rgb(129, 148, 171);
+  }

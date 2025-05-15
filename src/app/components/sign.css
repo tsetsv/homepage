@@ -1,0 +1,124 @@
+.login-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background-color: #F1EEF5;
+  }
+  
+  .login-card {
+    width: 100%;
+    max-width: 500px;
+    padding: 40px;
+    background-color: #F9FCFF;
+    border-radius: 24px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+  }
+  
+  .logo-container {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 32px;
+  }
+  
+  .logo {
+    width: 64px;
+    height: 64px;
+    object-fit: contain;
+  }
+  
+  .login-title {
+    font-size: 20px;
+    text-align: center;
+    margin-bottom: 32px;
+    color: #4b5563;
+    font-weight: normal;
+  }
+  
+  .form-group {
+    margin-bottom: 24px;
+  }
+  
+  .form-label {
+    display: block;
+    font-size: 14px;
+    margin-bottom: 8px;
+    color: #4b5563;
+  }
+  
+  .form-input {
+    width: 100%;
+    padding: 12px 16px;
+    border: 1px solid #e5e7eb;
+    border-radius: 6px;
+    outline: none;
+    transition: all 0.2s;
+  }
+  
+  .form-input:focus {
+    border-color: #fdba74;
+    box-shadow: 0 0 0 2px rgba(251, 146, 60, 0.1);
+  }
+  
+  .input-error {
+    border-color: #f97316;
+  }
+  
+  .login-button {
+    width: 100%;
+    padding: 12px;
+    background-color: #FF913C;
+    color: white;
+    border: none;
+    border-radius: 9999px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.2s;
+    margin-top: 8px;
+  }
+  
+  .login-button:hover {
+    background-color: #f18939;
+  }
+  
+  .footer-text {
+    font-size: 11px;
+    text-align: center;
+    color: #9ca3af;
+    margin-top: 32px;
+  }
+  
+  .back-button {
+    
+
+    top: 24px;
+    left: 24px;
+    color: #f97316;
+    background: none;
+    border: none;
+    cursor: pointer;
+  }
+  
+  /* Error message styling */
+  .error-message {
+    display: flex;
+    align-items: center;
+    margin-top: 8px;
+    padding: 10px 12px;
+    background-color: #fff7ed;
+    border: 1px solid #ffedd5;
+    border-radius: 6px;
+    color: #c2410c;
+    font-size: 14px;
+  }
+  
+  .error-icon {
+    display: flex;
+    margin-right: 8px;
+    color: #f97316;
+  }
+  
+  .error-icon svg {
+    width: 20px;
+    height: 20px;
+  }
