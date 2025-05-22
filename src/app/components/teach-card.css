@@ -1,87 +1,203 @@
 .teach-card {
-  width: 60%;
-  margin: 20px auto;
-  border-radius: 20px;
+  width: 70%; /* Changed to 60% of container width */
+  max-width: 600px; /* Added max-width for better control */
+  margin: 20px auto; /* Changed to auto for horizontal centering */
+  border-radius: 24px;
+  background: rgb(254, 229, 209);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  transition: all 0.3s ease;
   overflow: hidden;
-  background-color: #fff7d6; /* Light yellow background */
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-  display: flex;
-  flex-direction: column;
-  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  position: relative;
+  cursor: pointer;
 }
 
 .teach-card:hover {
-  transform: translateY(-10px);
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+  width: 80%;
+  max-width: 900px; /* Added max-width for better control */
+
+  transform: translateY(-5px);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
 }
 
-.teach-card-header {
+.teach-card-main {
+  padding: 40px 30px;
+  text-align: center;
+  position: relative;
+  z-index: 2;
+}
+
+.teach-card-image {
+  margin-bottom: 25px;
   display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 20px;
+  justify-content: center;
 }
 
-.teach-card-profile {
-  display: flex;
-  align-items: center;
-  gap: 20px;
-}
-
-.teach-card-photo {
+.teach-photo {
   width: 120px;
   height: 120px;
   border-radius: 50%;
   object-fit: cover;
-  border: 3px solid white;
+  border: none;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
 }
 
-.teach-card-info h3 {
-  font-size: 20px;
-  font-weight: bold;
-  margin: 0;
-  color: #4a4a4a;
+.teach-card:hover .teach-photo {
+  transform: scale(1.05);
 }
 
-.teach-card-info h4 {
+.teach-card-content {
+  color: rgba(50, 69, 92, 1);
+}
+
+.teach-name {
+  font-size: 28px;
+  font-weight: 600;
+  margin: 0 0 10px 0;
+  color: rgba(50, 69, 92, 1);
+}
+
+.teach-subject {
   font-size: 16px;
-  margin: 5px 0 0;
-  color: #4a4a4a;
-  opacity: 0.8;
+  margin: 0;
+  color: rgba(50, 69, 92, 1);
+  font-weight: 400;
 }
 
-.teach-card-stats {
+.teach-card-details {
+  background: white;
+  padding: 0;
+  max-height: 0;
+  overflow: hidden;
+  transition: all 0.4s ease;
+  opacity: 0;
+}
+
+.teach-card:hover .teach-card-details {
+  max-height: 400px;
+  padding: 30px;
+  opacity: 1;
+}
+
+.teach-stats {
   display: flex;
-  flex-direction: column;
+  justify-content: space-between;
+  margin-bottom: 25px;
+  gap: 15px;
+}
+
+.stat-item {
+  flex: 1;
+  text-align: center;
+  padding: 18px 12px;
+  background: #f8f9fa;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.stat-label {
+  display: block;
+  font-size: 13px;
+  color: #6c757d;
+  margin-bottom: 6px;
+  font-weight: 500;
+}
+
+.stat-value {
+  display: block;
+  font-size: 16px;
+  font-weight: 600;
+  color: #495057;
+}
+
+.teach-description {
+  margin-bottom: 25px;
+}
+
+.teach-description h4 {
+  font-size: 18px;
+  font-weight: 600;
+  color: #343a40;
+  margin: 0 0 12px 0;
+}
+
+.teach-description p {
+  font-size: 14px;
+  color: #6c757d;
+  line-height: 1.6;
+  margin: 0;
+}
+
+.teach-skills h4 {
+  font-size: 16px;
+  font-weight: 600;
+  color: #343a40;
+  margin: 0 0 15px 0;
+}
+
+.skills-list {
+  display: flex;
+  flex-wrap: wrap;
   gap: 10px;
 }
 
-.teach-card-stat {
-  background-color: white;
-  color: #243562;
-  font-size: 14px;
-  padding: 8px 15px;
-  border-radius: 15px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  text-align: center;
+.skill-tag {
+  background: rgba(255, 145, 60, 1);
+  color: white;
+  padding: 8px 14px;
+  border-radius: 20px;
+  font-size: 13px;
+  font-weight: 500;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
 }
 
-.teach-card-footer {
-  background-color: white;
-  text-align: center;
-  padding: 20px;
-  border-radius: 0 0 20px 20px;
+/* Container for centering cards - Шинэчлэгдсэн */
+.teachers-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(450px, 1fr));
+  gap: 50px;
+  justify-content: center;
+  justify-items: center;
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 40px 20px;
 }
 
-.teach-card-footer h3 {
-  font-size: 18px;
-  font-weight: bold;
-  margin-bottom: 10px;
-  color: #4a4a4a;
+/* Responsive Design */
+@media (max-width: 768px) {
+  .teach-card {
+    width: 380px;
+    margin: 15px;
+  }
+  
+  .teach-card-main {
+    padding: 30px 20px;
+  }
+  
+  .teach-photo {
+    width: 100px;
+    height: 100px;
+  }
+  
+  .teach-name {
+    font-size: 24px;
+  }
+  
+  .teach-subject {
+    font-size: 15px;
+  }
+  
+  .teachers-grid {
+    grid-template-columns: 1fr;
+    max-width: 90%;
+    gap: 25px;
+  }
 }
 
-.teach-card-footer p {
-  font-size: 14px;
-  color: #4a4a4a;
-  opacity: 0.8;
+/* Том дэлгэцэнд зориулсан нэмэлт тохиргоо */
+@media (min-width: 1200px) {
+  .teachers-grid {
+    max-width: 1100px;
+    gap: 60px;
+  }
 }

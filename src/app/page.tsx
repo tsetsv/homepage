@@ -2,6 +2,7 @@ import Header from './components/header';
 import Hero from './components/hero';
 import Description from './components/description';
 import DetailSection from './components/detail-section';
+import DetailSectionR from './components/detail-rigth'; //Зураг баруун талд бичиг зүүн тийш байх component нэмсэн нэр нь detail-rigth
 import Footer from './components/footer';
 import Images from './components/images';
 
@@ -45,12 +46,12 @@ export default function Home() {
         description="Эцэг эх, багш, эрхлэгч нар хэзээ ч, хаанаас ч хялбар харилцах боломжтой. Багшийн мэдээлэл, хичээлийн хуваарь, ахиц дэвшил зэргийг хянах боломж"
         isImageRight={true}
       />
-      <DetailSection
-        bannerImg="/images/detail-left.png"
+      <DetailSectionR // Энд байгаа зураг өөрчлөгдсөн
+        bannerImg="/images/detail.png"
         iconImg="/images/message.png"
         heading="Багшийн мэдээлэл"
         description="Багшийн мэдээлэл, хичээлийн хуваарь, ахиц дэвшил зэргийг хянах боломж. Багшийн мэдээлэл, хичээлийн хуваарь, ахиц дэвшил зэргийг хянах боломж"
-        isImageRight={false}
+        isImageLeft={true}
       />
       <DetailSection
         bannerImg="/images/detail-left.png"
@@ -59,12 +60,12 @@ export default function Home() {
         description="Багшийн мэдээлэл, хичээлийн хуваарь, ахиц дэвшил зэргийг хянах боломж."
         isImageRight={false}
       />
-      <DetailSection
-        bannerImg="/images/detail-left.png"
+      <DetailSectionR // Энд байгаа зураг өөрчлөгдсөн
+        bannerImg="/images/detail.png"
         iconImg="/images/message.png"
         heading="Багшийн мэдээлэл"
         description="Багшийн мэдээлэл, хичээлийн хуваарь, ахиц дэвшил зэргийг хянах боломж."
-        isImageRight={false}
+        isImageLeft={true}
       />
       <Footer />
     </>
