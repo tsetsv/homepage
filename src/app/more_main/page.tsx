@@ -1,8 +1,11 @@
+'use client';
+import { useRouter } from 'next/navigation';
 import Header from '../components/header';
 import Footer from '../components/footer';
 import './style.css';
 
 export default function PreschoolPage() {
+  const router = useRouter();
   return (
     <>
       <Header />
@@ -12,6 +15,10 @@ export default function PreschoolPage() {
         <section className="hero-section">
           <div className="overlay"></div>
           <div className="hero-content">
+          <button className="back-button" onClick={() => router.back()}>
+            <img src="/back.svg" alt="Буцах icon" className="back-icon" />
+            Буцах
+          </button>
             <h5>🎉ТАВТАЙ МОРИЛ!🎉</h5>
             <h1>PRESCHOOL</h1>
             <p>

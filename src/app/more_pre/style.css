@@ -1,0 +1,172 @@
+.parents-wrapper {
+  padding: 2rem 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+}
+
+/* Hero section */
+.hero-section {
+  height: 100vh; /* Бүх дэлгэцийн өндөр */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+  text-align: center;
+  background: linear-gradient(to right, #b8f9ff, #eed7ff);
+  background-color: #fefefe; /* хүсвэл background нэмэж болно */
+}
+
+.hero-section h5 {
+  font-weight: 500;
+  font-size: 1.25rem;
+  color: #666;
+  margin-bottom: 0.5rem;
+}
+
+.hero-section h1 {
+  font-size: 3rem; /* Том гарчиг */
+  font-weight: 800;
+  margin: 1rem 0;
+  color: #333;
+}
+
+.hero-section p {
+  max-width: 600px;
+  font-size: 1.125rem;
+  margin: 0 auto;
+  color: #444;
+  line-height: 1.6;
+}
+
+
+/* Guide section */
+.guide-section {
+  display: flex;
+  gap: 1rem;
+  padding: 1.5rem;
+  background: linear-gradient(to right, #f5e8ff, #defcff);
+  border-radius: 12px;
+  flex-wrap: wrap;
+}
+.guide-section img {
+  max-width: 180px;
+  border-radius: 8px;
+}
+.guide-text h4 {
+  color: #120902;
+  font-weight: 600;
+  font-size: 30px;
+}
+.guide-text h2 {
+  font-size: 1.25rem;
+  margin: 0.5rem 0;
+}
+.guide-text ul {
+  list-style: disc;
+  padding-left: 1rem;
+  color: #333;
+}
+
+/* Criteria section */
+.criteria-section h5 {
+  font-weight: 500;
+  color: #888;
+  margin-bottom: 0.25rem;
+}
+.criteria-section h4 {
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+.criteria-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+.criteria-list .item {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  font-size: 0.95rem;
+  color: #333;
+}
+
+/* Call to action section */
+.call-section {
+  text-align: center;
+  border: 1px solid #f97316;
+  border-radius: 12px;
+  padding: 1.5rem;
+  background-color: #fff7ed;
+}
+.call-section p {
+  margin-bottom: 1rem;
+  font-size: 0.95rem;
+}
+.contact-btn {
+  background-color: #FF913C;
+  color: white;
+  border: none;
+  padding: 0.75rem 1.5rem;
+  border-radius: 40px;
+  font-weight: 600;
+  cursor: pointer;
+  margin: 30px 40px;
+}
+.contact-btn:hover {
+  background-color: #f7b079;
+}
+
+.stat-icon {
+    width: 30px;
+    height: auto;
+}
+
+.hero-section {
+  position: relative;
+  padding: 2rem;
+  background-color: #fdfdfd;
+  border-radius: 12px;
+}
+
+.back-button {
+  position: absolute;
+  top: 1rem;
+  left: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  background-color: #b8f9ff;
+  color: #333;
+  border: none;
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  z-index: 10;
+}
+
+.back-button:hover {
+  background-color: #8ee3ea;
+}
+
+.back-icon {
+  width: 20px;
+  height: 20px;
+}
+
+
+/* Responsive layout */
+@media (max-width: 640px) {
+  .guide-section {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  .guide-section img {
+    max-width: 100%;
+  }
+}
