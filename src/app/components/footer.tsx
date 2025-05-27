@@ -30,7 +30,7 @@ const Footer: React.FC = () => {
             </p>
           </div>
           <div className="footer-detail">
-            <h4>Онцлог</h4>
+            <h4>Онцлох</h4>
             <p>
               <a href="/teacher">Гэрийн багш</a>
             </p>

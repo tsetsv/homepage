@@ -16,7 +16,7 @@
 }
 
 .detail-right-container.image-right {
-  flex-direction: row-reverse; /* Зурган баруун тал, текст зүүн талд */
+  flex-direction: row-reverse; /* Зурган баруун тал */
 }
 
 .banner-img {
@@ -28,11 +28,11 @@
 .details-content {
   display: flex;
   flex-direction: column;
-  align-items: flex-end; /* Баруун тийш тэгшлэх */
+  align-items: flex-end;
   justify-content: center;
   width: 50%;
   gap: 10px;
-  text-align: right; /* Текстийг баруун тийш тэгшлэх */
+  text-align: right;
 }
 
 .icon-img {
@@ -49,4 +49,73 @@
 .details-content p {
   font-size: 16px;
   color: rgba(50, 69, 92, 0.8);
+}
+
+/* ------------ Responsive Breakpoints ------------ */
+
+@media (max-width: 1024px) {
+  .detail-right-container {
+    width: 90%;
+    gap: 16px;
+  }
+
+  .details-content h4 {
+    font-size: 22px;
+  }
+
+  .details-content p {
+    font-size: 15px;
+  }
+}
+
+@media (max-width: 768px) {
+  .detail-right-container,
+  .detail-right-container.image-right {
+    flex-direction: column;
+  }
+
+  .banner-img,
+  .details-content {
+    width: 100%;
+    text-align: center;
+    align-items: center;
+  }
+
+  .details-content {
+    margin-top: 24px;
+    align-items: center; /* зүүнээс center болж өөрчлөгдөнө */
+    text-align: center;
+  }
+
+  .icon-img {
+    width: 70px;
+    height: 70px;
+  }
+
+  .details-content h4 {
+    font-size: 20px;
+  }
+
+  .details-content p {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 480px) {
+  .detail-right-section {
+    padding: 24px 0;
+  }
+
+  .icon-img {
+    width: 60px;
+    height: 60px;
+  }
+
+  .details-content h4 {
+    font-size: 18px;
+  }
+
+  .details-content p {
+    font-size: 13px;
+  }
 }

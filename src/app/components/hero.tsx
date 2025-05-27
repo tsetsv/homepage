@@ -4,11 +4,12 @@ import './hero.css';
 interface HeroSectionProps {
   title: string;
   text: string;
+  page: string; 
   buttonText: string;
   image: string;
 }
 
-const HeroSection: React.FC<HeroSectionProps> = ({ title, text, buttonText, image}) => {
+const HeroSection: React.FC<HeroSectionProps> = ({ title, text, buttonText, page, image}) => {
   return (
     <section
       className="hero-section"
@@ -18,7 +19,7 @@ const HeroSection: React.FC<HeroSectionProps> = ({ title, text, buttonText, imag
         <h1 className="hero-title">{title}</h1>
         <p className="hero-text">{text}</p>
         <div className="hero-button">
-          <a href="#" role="button" aria-label={buttonText}>
+          <a href={page} role="button" aria-label={buttonText}>
             {buttonText}
           </a>
         </div>

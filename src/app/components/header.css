@@ -10,6 +10,7 @@
   align-items: center;
   max-width: 1200px;
   margin: 0 auto;
+  flex-wrap: wrap;
 }
 
 .logo-container {
@@ -26,7 +27,7 @@
 
 .logo-text {
   font-size: 1.5rem;
-  font-weight:bold;
+  font-weight: bold;
   color: #FF913C;
 }
 
@@ -75,4 +76,51 @@
 
 .auth-button:hover {
   background-color: rgb(236, 119, 30);
+}
+
+/* ------------ RESPONSIVE -------------- */
+@media (max-width: 768px) {
+  .header-container {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 1rem;
+  }
+
+  .navbar {
+    width: 100%;
+    justify-content: space-between;
+    margin-top: 1rem;
+    flex-wrap: wrap;
+  }
+
+  .navbar-menu {
+    flex-direction: column;
+    width: 100%;
+    gap: 1rem;
+    margin-top: 0.5rem;
+  }
+
+  .auth {
+    margin: 1rem 0 0 0;
+    width: 100%;
+  }
+
+  .auth-button {
+    width: 100%;
+    text-align: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .logo-text {
+    font-size: 1.2rem;
+  }
+
+  .logo-image {
+    width: 40px;
+  }
+
+  .navbar-item a {
+    font-size: 0.95rem;
+  }
 }

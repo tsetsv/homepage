@@ -1,203 +1,172 @@
-.teach-card {
-  width: 70%; /* Changed to 60% of container width */
-  max-width: 600px; /* Added max-width for better control */
-  margin: 20px auto; /* Changed to auto for horizontal centering */
-  border-radius: 24px;
-  background: rgb(254, 229, 209);
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
-  transition: all 0.3s ease;
-  overflow: hidden;
-  position: relative;
-  cursor: pointer;
-}
-
-.teach-card:hover {
-  width: 80%;
-  max-width: 900px; /* Added max-width for better control */
-
-  transform: translateY(-5px);
-  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
-}
-
-.teach-card-main {
-  padding: 40px 30px;
-  text-align: center;
-  position: relative;
-  z-index: 2;
-}
-
-.teach-card-image {
-  margin-bottom: 25px;
-  display: flex;
-  justify-content: center;
-}
-
-.teach-photo {
-  width: 120px;
-  height: 120px;
-  border-radius: 50%;
-  object-fit: cover;
-  border: none;
-  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s ease;
-}
-
-.teach-card:hover .teach-photo {
-  transform: scale(1.05);
-}
-
-.teach-card-content {
-  color: rgba(50, 69, 92, 1);
-}
-
-.teach-name {
-  font-size: 28px;
-  font-weight: 600;
-  margin: 0 0 10px 0;
-  color: rgba(50, 69, 92, 1);
-}
-
-.teach-subject {
-  font-size: 16px;
+* {
+  box-sizing: border-box;
   margin: 0;
-  color: rgba(50, 69, 92, 1);
-  font-weight: 400;
-}
-
-.teach-card-details {
-  background: white;
   padding: 0;
-  max-height: 0;
-  overflow: hidden;
-  transition: all 0.4s ease;
-  opacity: 0;
+  font-family: sans-serif;
 }
 
-.teach-card:hover .teach-card-details {
-  max-height: 400px;
-  padding: 30px;
-  opacity: 1;
-}
-
-.teach-stats {
+.card {
   display: flex;
-  justify-content: space-between;
-  margin-bottom: 25px;
-  gap: 15px;
-}
-
-.stat-item {
-  flex: 1;
-  text-align: center;
-  padding: 18px 12px;
-  background: #f8f9fa;
-  border-radius: 12px;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
-}
-
-.stat-label {
-  display: block;
-  font-size: 13px;
-  color: #6c757d;
-  margin-bottom: 6px;
-  font-weight: 500;
-}
-
-.stat-value {
-  display: block;
-  font-size: 16px;
-  font-weight: 600;
-  color: #495057;
-}
-
-.teach-description {
-  margin-bottom: 25px;
-}
-
-.teach-description h4 {
-  font-size: 18px;
-  font-weight: 600;
-  color: #343a40;
-  margin: 0 0 12px 0;
-}
-
-.teach-description p {
-  font-size: 14px;
-  color: #6c757d;
-  line-height: 1.6;
-  margin: 0;
-}
-
-.teach-skills h4 {
-  font-size: 16px;
-  font-weight: 600;
-  color: #343a40;
-  margin: 0 0 15px 0;
-}
-
-.skills-list {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 10px;
-}
-
-.skill-tag {
-  background: rgba(255, 145, 60, 1);
-  color: white;
-  padding: 8px 14px;
+  flex-direction: row;
+  background: white;
   border-radius: 20px;
-  font-size: 13px;
-  font-weight: 500;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  padding: 24px;
+  gap: 24px;
+  border-left: #f90 4px solid;
+  width: 70%;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  flex-wrap: wrap;
+  margin: 20px auto;
 }
 
-/* Container for centering cards - Шинэчлэгдсэн */
-.teachers-grid {
-  display: grid;
-  grid-template-columns: repeat(2, minmax(450px, 1fr));
-  gap: 50px;
-  justify-content: center;
-  justify-items: center;
-  max-width: 1000px;
-  margin: 0 auto;
-  padding: 40px 20px;
+.image-section img {
+  width: 240px;
+  height: 270px;
+  object-fit: cover;
+  border-radius: 12px;
 }
 
-/* Responsive Design */
-@media (max-width: 768px) {
-  .teach-card {
-    width: 380px;
-    margin: 15px;
+.info-section {
+  flex: 1;
+  min-width: 300px;
+}
+
+.info-section h2 {
+  font-weight: bold;
+  font-size: 22px;
+  margin-bottom: 12px;
+}
+
+.info-item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 8px;
+  font-size: 15px;
+}
+
+.icon-svg {
+  width: 18px;
+  height: 18px;
+  margin-right: 8px;
+  vertical-align: middle;
+}
+
+.description {
+  margin-top: 12px;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 1.6;
+}
+
+.contact-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-width: 160px;
+  padding-left: 12px;
+  border-left: 1px solid #ddd;
+}
+
+.rating,
+.price {
+  text-align: center;
+}
+
+.score {
+  font-size: 28px;
+  font-weight: bold;
+  margin-bottom: 4px;
+}
+
+.label,
+.duration {
+  font-size: 14px;
+  color: #555;
+}
+
+.amount, .rating-number {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 4px;
+}
+
+.contact-btn {
+  margin-top: 20px;
+  padding: 8px 12px;
+  border: 1px solid #f90;
+  color: #f90;
+  background: transparent;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.contact-btn:hover {
+  background: #f90;
+  color: white;
+}
+
+/* -------------------- Responsive -------------------- */
+
+/* Tablet and below (1024px) */
+@media (max-width: 1024px) {
+  .card {
+    flex-direction: column;
+    align-items: center;
+    width: 90%;
+    text-align: center;
   }
-  
-  .teach-card-main {
-    padding: 30px 20px;
+
+  .image-section img {
+    width: 100%;
+    max-width: 300px;
+    height: auto;
   }
-  
-  .teach-photo {
-    width: 100px;
-    height: 100px;
+
+  .info-section {
+    width: 100%;
   }
-  
-  .teach-name {
-    font-size: 24px;
+
+  .contact-section {
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    border-left: none;
+    border-top: 1px solid #ddd;
+    margin-top: 20px;
+    padding-top: 12px;
+    width: 100%;
   }
-  
-  .teach-subject {
-    font-size: 15px;
-  }
-  
-  .teachers-grid {
-    grid-template-columns: 1fr;
-    max-width: 90%;
-    gap: 25px;
+
+  .contact-btn {
+    margin-top: 0;
   }
 }
 
-/* Том дэлгэцэнд зориулсан нэмэлт тохиргоо */
-@media (min-width: 1200px) {
-  .teachers-grid {
-    max-width: 1100px;
-    gap: 60px;
+/* Mobile (600px and below) */
+@media (max-width: 600px) {
+  .info-section h2 {
+    font-size: 18px;
+  }
+
+  .description {
+    font-size: 13px;
+  }
+
+  .amount, .rating-number, .score {
+    font-size: 16px;
+  }
+
+  .info-item {
+    font-size: 14px;
+  }
+
+  .contact-section {
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .contact-btn {
+    width: 100%;
   }
 }

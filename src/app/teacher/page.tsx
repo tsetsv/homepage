@@ -6,75 +6,75 @@ import TeacherCard from '../components/teach-card';
 
 const TeacherPage: React.FC = () => {
   const teachers = [
-    { //багшийн карт бүрэн өөрчлөгдсөн ба teach card tsx css бүгд өөр болсон
-      photo: "/images/duck.png",
-      name: "Б.Сарантуяа",
-      subject: "Математик багш",
-      experience: "8 жил",
-      rating: "4.9/5",
-      students: "150+",
-      description: "Математикийн суурь ойлголтуудыг хүүхдүүдэд ойлгомжтой, сонирхолтой байдлаар заадаг. Тоглоом, дүрслэл ашиглан хичээлийг илүү сонирхолтой болгодог.",
-      skills: ["Дижитал хичээл", "Интерактив арга", "Бүлгийн ажил"]
+    {
+      icd: 1,
+      name: "Д. Гантуяа",
+      flag: "🇲🇳",
+      subject: "Математик",
+      students: "2",
+      experience: "5 жилийн турш хөгжүүлсэн, 5 жил бага сургуульд багшилсан",
+      rating: 5,
+      price: 50000,
+      duration: "60 мин хичээл",
+      imageUrl: "/images/bagsh1.jpg",
+      introduction: "😊 — Hello there! My name is Peter and I am from England! I have lived here my whole life and I currently live in the south of England in a place called Brighton, not too far from London. I have a BA Degree in Songwriting and I am currently doing a Master's Degree in Songwriting in London.",
+      email: "tstsnblgd@gmail.com"
     },
     {
-      photo: "/images/cat.png",
-      name: "Д.Болормаа",
-      subject: "Монгол хэл багш",
-      experience: "12 жил",
-      rating: "4.8/5",
-      students: "200+",
-      description: "Монгол хэл, уран зохиолын хичээлийг уламжлалт болон орчин үеийн аргуудыг хослуулан заадаг. Хүүхдүүдийн уншлага, бичлэгийн чадварыг хөгжүүлдэг.",
-      skills: ["Уламжлалт арга", "Уран зохиол", "Илтгэх чадвар"]
+      id: 2,
+      name: "Б. Батбаяр",
+      flag: "🇲🇳",
+      subject: "Физик",
+      students: "8",
+      experience: "10 жилийн дунд сургуулийн туршлагатай, 3 жил их сургуульд багшилсан",
+      rating: 4,
+      price: 45000,
+      duration: "90 мин хичээл",
+      imageUrl: "/Images/bagsh2.jpg",
+      introduction: "🔬 — Сайн байна уу! Би физикийн багш Батбаяр. Шинжлэх ухааны салбарт олон жилийн туршлагатай. Хүүхдүүдэд физикийн хичээлийг сонирхолтой, ойлгомжтой заах дуртай.",
+      email: "tstsnblgd@gmail.com"
     },
     {
-      photo: "/images/draw.png",
-      name: "Г.Батбаяр",
-      subject: "Англи хэл багш",
-      experience: "6 жил",
-      rating: "4.7/5",
-      students: "180+",
-      description: "Англи хэлийг тоглоом, дуу хөгжим, зураг зэргийг ашиглан заадаг. Хүүхдүүд англи хэлийг байгалийн жам дагуу эзэмшихэд туслдаг.",
-      skills: ["Мультимедиа", "Тоглоомын арга", "Яриа хэлэлцүүлэг"]
+      id: 3,
+      name: "С. Сарангэрэл",
+      flag: "🇲🇳",
+      subject: "Англи хэл",
+      students: "15",
+      experience: "7 жилийн хэл заах туршлагатай, IELTS болон TOEFL бэлтгэл хичээл зааж байсан",
+      rating: 5,
+      price: 35000,
+      duration: "45 мин хичээл",
+      imageUrl: "/Images/bagsh3.jpg",
+      introduction: "🌟 — Hi everyone! I'm Sarah, an experienced English teacher. I love helping students improve their language skills and achieve their goals. Let's make learning English fun and effective together!",
+      email: "tstsnblgd@gmail.com"
     },
     {
-      photo: "/images/group.png",
-      name: "С.Оюунчимэг",
-      subject: "Дүрслэх урлаг багш",
-      experience: "10 жил",
-      rating: "4.9/5",
-      students: "120+",
-      description: "Хүүхдүүдийн бүтээлч сэтгэлгээ, уран бүтээлийн чадварыг хөгжүүлдэг. Өөр өөр материал, техник ашиглан хүүхдүүдийн урлагийн дадлагыг бүрдүүлдэг.",
-      skills: ["Бүтээлч сэтгэлгээ", "Өнгө зүй", "Гар урлал"]
+      id: 4,
+      name: "Т. Төмөрбаатар",
+      flag: "🇲🇳",
+      subject: "Хими",
+      students: "6",
+      experience: "12 жилийн химийн багшийн туршлагатай, олимпиад бэлтгэл хичээл заадаг",
+      rating: 4,
+      price: 40000,
+      duration: "75 мин хичээл",
+      imageUrl: "/Images/bagsh1.jpg",
+      introduction: "⚗️ — Сайн байна уу! Би химийн багш Төмөрбаатар. Химийн хичээлийг амьдралын жишээтэй холбон заах дуртай. Суралцагчид маань химийн ертөнцийг сонирхолтойгоор судлаж байна.",
+      email: "tstsnblgd@gmail.com"
     },
     {
-      photo: "/images/duck.png",
-      name: "Б.Мөнхбат",
-      subject: "Хөгжим багш",
-      experience: "7 жил",
-      rating: "4.8/5",
-      students: "90+",
-      description: "Дуу хөгжим, хөгжмийн зэмсгийн заах арга зүйд мэргэшсэн. Хүүхдүүдийн дуулах, хөгжмийн зэмсэг тоглох чадварыг хөгжүүлдэг.",
-      skills: ["Төгөлдөр хуур", "Дуулах", "Хөгжмийн онол"]
-    },
-    {
-      photo: "/images/duck.png",
-      name: "Н.Энхжаргал",
-      subject: "Байгаль орчин багш",
-      experience: "9 жил",
-      rating: "4.7/5",
-      students: "160+",
-      description: "Байгаль орчны хичээлийг практик туршилт, ажиглалтын аргаар заадаг. Хүүхдүүдэд байгаль хамгаалах ухамсрыг төлөвшүүлдэг.",
-      skills: ["Шинжлэх ухаан", "Туршилт", "Байгаль хамгаалал"]
-    },
-    {
-      photo: "/images/duck.png",
-      name: "Ц.Нарантуяа",
-      subject: "Биеийн тамир багш",
-      experience: "5 жил",
-      rating: "4.6/5",
-      students: "220+",
-      description: "Биеийн тамир, эрүүл мэндийн хичээлийг тоглоом, уралдаан, спортын дасгалаар заадаг. Хүүхдүүдийн эрүүл амьдралын хэв маягийг төлөвшүүлдэг.",
-      skills: ["Спортын тоглоом", "Эрүүл мэнд", "Багийн ажиллагаа"]
+      id: 5,
+      name: "О. Отгонбаяр",
+      flag: "🇲🇳",
+      subject: "Программчлал",
+      students: "20",
+      experience: "8 жилийн програм хангамж хөгжүүлэх туршлагатай, 4 жил хүүхдүүдэд кодлох заасан",
+      rating: 5,
+      price: 60000,
+      duration: "120 мин хичээл",
+      imageUrl: "/Images/bagsh2.jpg",
+      introduction: "💻 — Hello! I'm a software developer turned teacher. I specialize in teaching programming to kids and beginners. Let's code together and build amazing projects while having fun!",
+      email: "tstsnblgd@gmail.com"
     }
   ];
 
@@ -84,6 +84,7 @@ const TeacherPage: React.FC = () => {
       <HeroSection
         title="Гэрийн багштай холбогдох хамгийн хялбар арга!"
         text="Бид таны хүүхдийн боловсролд хувь нэмэр оруулах шилдэг багш нарыг санал болгож байна."
+        page="/more_teacher"
         buttonText="Цааш унших"
         image="/images/teacher.png"
       />
@@ -109,19 +110,24 @@ const TeacherPage: React.FC = () => {
           },
         ]}
       />
-      {teachers.map((teacher, index) => (
-        <TeacherCard
-          key={index}
-          photo={teacher.photo}
-          name={teacher.name}
-          subject={teacher.subject}
-          experience={teacher.experience}
-          rating={teacher.rating}
-          students={teacher.students}
-          description={teacher.description}
-          skills={teacher.skills}
-        />
-      ))}
+      <div className="teachers-grid">
+          {teachers.map((teacher) => (
+            <TeacherCard
+              key={teacher.id}
+              name={teacher.name}
+              flag={teacher.flag}
+              subject={teacher.subject}
+              students={teacher.students}
+              experience={teacher.experience}
+              rating={teacher.rating}
+              price={teacher.price}
+              duration={teacher.duration}
+              imageUrl={teacher.imageUrl}
+              introduction={teacher.introduction}
+              email={teacher.email}
+            />
+          ))}
+      </div>
       <Footer />
     </>
   );

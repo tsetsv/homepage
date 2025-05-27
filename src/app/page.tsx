@@ -13,6 +13,7 @@ export default function Home() {
       <Hero
         title="Цэцэрлэгтэй холбогдох хамгийн хялбар арга!"
         text="Таны хүүхдийг эрүүл, аюулгүй сурч боловсроход бид анхаарах болно."
+        page="/more_main"
         buttonText="Цааш унших"
         image="/images/home.png"
       />

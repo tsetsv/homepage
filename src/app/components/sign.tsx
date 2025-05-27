@@ -31,26 +31,22 @@ const LoginPage: React.FC = () => {
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     
-    // Validate email before submission
     if (!validateEmail(email)) {
       return;
     }
     
-    // Handle login logic here
     console.log('Login attempt with:', { email, password });
   };
 
   return (
     <div className="login-container">
       <div className="login-card">
-        {/* Back button - optional */}
         <button onClick={() => window.history.back()} className="back-button">
           <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="currentColor">
             <path fillRule="evenodd" d="M9.707 16.707a1 1 0 01-1.414 0l-6-6a1 1 0 010-1.414l6-6a1 1 0 011.414 1.414L5.414 9H17a1 1 0 110 2H5.414l4.293 4.293a1 1 0 010 1.414z" clipRule="evenodd" />
           </svg>
         </button>
         
-        {/* Logo */}
         <div className="logo-container">
           <Image 
             src="/images/logo.png" 
@@ -62,19 +58,18 @@ const LoginPage: React.FC = () => {
           />
         </div>
         
-        {/* Main heading */}
         <h2 className="login-title">
           Email нууц үгээ оруулж нэвтрэнэ үү!
         </h2>
         
         <form onSubmit={handleSubmit}>
-          {/* Email field */}
+          
           <div className="form-group">
             <label htmlFor="email" className="form-label">
               Email
             </label>
             <input
-              type="text" // Changed from email to text to handle custom validation
+              type="text" 
               id="email"
               className={`form-input ${emailError ? 'input-error' : ''}`}
               value={email}
@@ -93,7 +88,6 @@ const LoginPage: React.FC = () => {
             )}
           </div>
           
-          {/* Password field */}
           <div className="form-group">
             <label htmlFor="password" className="form-label">
               Нууц үг
@@ -108,7 +102,6 @@ const LoginPage: React.FC = () => {
             />
           </div>
           
-          {/* Login button */}
           <button
             type="submit"
             className="login-button"
@@ -117,7 +110,6 @@ const LoginPage: React.FC = () => {
           </button>
         </form>
         
-        {/* Footer text */}
         <p className="footer-text">
           Нэвтрэх эрхгүй бол хамаарал бүхий цэцэрлэгийн мэргэжилтэнтэй холбогдоно уу!
         </p>

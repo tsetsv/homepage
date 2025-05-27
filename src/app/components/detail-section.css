@@ -1,51 +1,118 @@
 .detail-section {
-    width: 100vw;
-    background-color: #FFECEE;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 40px 0;
-  }
-  
+  width: 100vw;
+  background-color: #FFECEE;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 40px 0;
+}
+
+.detail-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 80%;
+  gap: 20px;
+}
+
+.detail-container.image-left {
+  flex-direction: row-reverse; /* Зурган тал зүүнд */
+}
+
+.banner-img {
+  width: 50%;
+  height: auto;
+  border-radius: 20px;
+}
+
+.details-right {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  width: 50%;
+  gap: 10px;
+}
+
+.icon-img {
+  width: 90px;
+  height: 90px;
+}
+
+.details-right h4 {
+  font-size: 24px;
+  font-weight: bold;
+  color: rgba(50, 69, 92, 1);
+}
+
+.details-right p {
+  font-size: 16px;
+  color: rgba(50, 69, 92, 0.8);
+}
+
+/* ----------- Responsive Breakpoints ----------- */
+
+@media (max-width: 1024px) {
   .detail-container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 80%;
-    gap: 20px;
+    width: 90%;
+    gap: 16px;
   }
-  
-  .detail-container.image-left {
-    flex-direction: row-reverse; /* Зурган тал зүүнд байрлана */
-  }
-  
-  .banner-img {
-    width: 50%;
-    height: auto;
-    border-radius: 20px;
-  }
-  
-  .details-right {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    justify-content: center;
-    width: 50%;
-    gap: 10px;
-  }
-  
-  .icon-img {
-    width: 90px;
-    height: 90px;
-  }
-  
+
   .details-right h4 {
-    font-size: 24px;
-    font-weight: bold;
-    color: rgba(50, 69, 92, 1);
+    font-size: 22px;
   }
-  
+
   .details-right p {
-    font-size: 16px;
-    color: rgba(50, 69, 92, 0.8);
+    font-size: 15px;
   }
+}
+
+@media (max-width: 768px) {
+  .detail-container,
+  .detail-container.image-left {
+    flex-direction: column;
+  }
+
+  .banner-img,
+  .details-right {
+    width: 100%;
+    text-align: center;
+    align-items: center;
+  }
+
+  .details-right {
+    margin-top: 24px;
+  }
+
+  .icon-img {
+    width: 70px;
+    height: 70px;
+  }
+
+  .details-right h4 {
+    font-size: 20px;
+  }
+
+  .details-right p {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 480px) {
+  .detail-section {
+    padding: 24px 0;
+  }
+
+  .icon-img {
+    width: 60px;
+    height: 60px;
+  }
+
+  .details-right h4 {
+    font-size: 18px;
+  }
+
+  .details-right p {
+    font-size: 13px;
+  }
+}
